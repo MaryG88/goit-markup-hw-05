@@ -446,6 +446,7 @@ footer .logo-accent {
 .footer-second-part {
   display: flex;
   flex-direction: column;
+  margin-right: 80px;
 }
 
 .footer-container {
@@ -499,6 +500,7 @@ footer .logo-accent {
 .footer-form {
   display: flex;
   flex-direction: row;
+  gap: 24px;
 }
 
 .footer-form-title {
@@ -518,6 +520,15 @@ footer .logo-accent {
   padding-bottom: 8px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   outline: none;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.form-input::placeholder {
+  color: #fff;
 }
 
 .footer-btn {
@@ -527,10 +538,9 @@ footer .logo-accent {
   flex-direction: row;
   border: none;
   border-radius: 4px;
-  gap: 16px;
-  margin-left: 24px;
+
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   color: #fff;
@@ -541,6 +551,7 @@ footer .logo-accent {
 
 .footer-subscribe-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 
 .backdrop {
@@ -584,7 +595,7 @@ footer .logo-accent {
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -593,14 +604,20 @@ footer .logo-accent {
   position: absolute;
   top: 24px;
   right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
   border-radius: 50%;
   background-color: #e7e9fc;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   stroke-width: 1px;
   stroke: rgba(0, 0, 0, 0.1);
   width: 24px;
   height: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -614,17 +631,15 @@ footer .logo-accent {
 }
 
 .modal-close-icon {
-  position: absolute;
-  top: 8px;
-  left: 8px;
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
   font-weight: 500;
   text-align: center;
   color: #2e2f42;
-  margin-top: 48px;
+
   margin-bottom: 16px;
 }
 
@@ -647,6 +662,7 @@ footer .logo-accent {
   color: black;
   font-size: 12px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:hover,
@@ -668,14 +684,20 @@ footer .logo-accent {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-label {
+  display: block;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+}
+
+.comment-field {
+  margin-bottom: 16px;
 }
 
 .modal-comment {
@@ -688,6 +710,11 @@ footer .logo-accent {
   outline: transparent;
   padding: 8px 16px;
   resize: none;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment:hover,
@@ -708,6 +735,7 @@ footer .logo-accent {
   justify-content: flex-start;
   flex-direction: row;
   gap: 8px;
+  margin-bottom: 24px;
 }
 
 .modal-terms-label {
@@ -716,7 +744,7 @@ footer .logo-accent {
   justify-content: flex-start;
   flex-direction: row;
   font-size: 12px;
-  line-height: 1.167;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   font-style: normal;
   color: #8e8f99;
@@ -731,11 +759,18 @@ footer .logo-accent {
 }
 
 .modal-checkbox-btn {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
   margin-right: 8px;
   height: 16px;
   width: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-btn:active {
@@ -751,8 +786,10 @@ footer .logo-accent {
   fill: #f4f4fd;
 }
 
-.modal-terms-input:checked + .modal-terms-label > .modal-checkbox-btn {
+.modal-terms input:checked + label > .modal-checkbox-btn {
   background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 
 .modal-send-btn {
@@ -765,9 +802,10 @@ footer .logo-accent {
   background-color: #4d5ae5;
   font-weight: 500;
   letter-spacing: 0.04em;
+  line-height: 1.5;
   text-align: center;
   color: #fff;
-  margin: 24px auto;
+  margin: 0 auto;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
