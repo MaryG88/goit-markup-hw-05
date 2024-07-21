@@ -731,15 +731,15 @@ footer .logo-accent {
 }
 
 .modal-terms {
+  margin-bottom: 24px;
+}
+
+.modal-terms-label {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
   gap: 8px;
-  margin-bottom: 24px;
-}
-
-.modal-terms-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -749,7 +749,7 @@ footer .logo-accent {
 
 .modal-terms-label a {
   margin-left: 4px;
-  line-height: 1.33333;
+  line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
@@ -770,22 +770,13 @@ footer .logo-accent {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox-btn:active {
-  background-color: #404bbf;
-}
-
-.modal-checkbox-icon {
-  padding-left: 2px;
-  fill: transparent;
-}
-
-.modal-checkbox-btn:active .modal-checkbox-icon {
-  fill: #f4f4fd;
-}
-
 .modal-terms input:checked + label > .modal-checkbox-btn {
   background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
+}
+
+.modal-checkbox-btn:active .modal-checkbox-icon {
   fill: #f4f4fd;
 }
 
